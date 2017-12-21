@@ -7,7 +7,6 @@ char firstNotRepeatingCharacter(String s) {
     for(int i = 0; i < s.length(); i++){
         curr = s.charAt(i);
         index = curr - 'a';
-
         if(abc[index] == 0){
             abc[index] = i+1;
         }else if(abc[index] > 0){
@@ -16,7 +15,6 @@ char firstNotRepeatingCharacter(String s) {
     }
 
     for(int j = 0; j < abc.length; j++){
-        System.out.println(abc[j]);
         if(abc[j] < min && abc[j] != 0){
             index = j;
             min = abc[j];
